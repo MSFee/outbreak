@@ -1,24 +1,5 @@
-# outbreak
+### 这是一个模仿微博发布疫情信息的项目
 
-## Project setup
-```
-npm install
-```
+### 主要技术栈为 vue + node + echarts + element-ui
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 希望疫情早日消除！！！
