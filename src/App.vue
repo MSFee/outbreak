@@ -3,7 +3,7 @@
     <div id="nav">
       <router-link to="/">全国疫情地图</router-link> |
       <router-link to="/discount">疫情折线图</router-link>
-       <router-link to="/table">各省市详细数据</router-link>
+      <router-link to="/table">各省市详细数据</router-link>
     </div>
     <router-view/>
   </div>
@@ -21,11 +21,10 @@
 
 #nav {
   padding: 30px;
-
+  
   a {
     font-weight: bold;
     color: #2c3e50;
-
     &.router-link-exact-active {
       color: #42b983;
     }

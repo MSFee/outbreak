@@ -21,7 +21,17 @@ const routes = [
   {
     path: '/table',
     name: 'table',
-    component: () => import('../views/Table.vue')
+    component: () => import('../views/Province/index.vue'),
+    children: [{
+      path: '',
+      component: () => import('../views/Province/Table.vue')
+    },
+    {
+      path: 'detail',
+      name: 'detail',
+      component: () => import('../views/Province/ProvinceDetail.vue')
+    }
+  ],
   }
 ]
 
