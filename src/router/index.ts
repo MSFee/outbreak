@@ -32,6 +32,11 @@ const routes = [
       component: () => import('../views/Province/ProvinceDetail.vue')
     }
   ],
+  },
+  {
+    path: '/world',
+    name: 'world',
+    component: () => import('../views/World.vue')
   }
 ]
 

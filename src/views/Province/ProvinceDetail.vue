@@ -1,5 +1,8 @@
 <template>
-  <div id="main"></div>
+  <div class="body">
+      <div id="main"></div>
+      <ProvinceDiscount :childrenProvinceName="queryName"/>
+  </div>
 </template>
 <script lang="ts">
 import sichuan from "echarts/map/json/province/sichuan.json";
@@ -31,9 +34,15 @@ import xizang from "echarts/map/json/province/xizang.json";
 import qinghai from "echarts/map/json/province/qinghai.json";
 import xinjiang from "echarts/map/json/province/xinjiang.json";
 import ningxia from "echarts/map/json/province/ningxia.json";
+
 import { Component, Prop, Vue, Provide } from "vue-property-decorator";
 
-@Component
+import ProvinceDiscount from '@/views/Province/ProvinceDiscount.vue';
+@Component({
+   components: {
+     ProvinceDiscount,
+   }
+})
 export default class DiscountMap extends Vue {
   private charts = null;
   private provinceName: any;
@@ -131,7 +140,7 @@ export default class DiscountMap extends Vue {
     //配置属性
     series: [
       {
-        name: "数量",
+        name: "确诊",
         type: "map",
 
         map: "chongqing",
@@ -189,6 +198,11 @@ export default class DiscountMap extends Vue {
 }
 </script>
 <style lang="less" scoped>
+.body {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+}
 #main {
   height: 500px;
   width: 100vw;
