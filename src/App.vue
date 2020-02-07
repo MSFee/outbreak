@@ -4,7 +4,8 @@
       <router-link to="/">全国疫情地图</router-link> |
       <router-link to="/discount">疫情折线图</router-link> |
       <router-link to="/table">各省市详细数据</router-link> |
-      <router-link to="/world">世界疫情数据</router-link>
+      <router-link to="/world">世界疫情数据</router-link> | 
+      <router-link to="/dynamic">疫情动态</router-link>
     </div>
     <router-view/>
   </div>

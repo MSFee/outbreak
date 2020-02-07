@@ -37,6 +37,15 @@ const routes = [
     path: '/world',
     name: 'world',
     component: () => import('../views/World.vue')
+  },
+  {
+    path: '/dynamic',
+    name: 'dynamic',
+    component: () => import('../views/EpidemicDynamic/index.vue'),
+    children: [{
+      path: '',
+      component: () => import('../views/EpidemicDynamic/Detail.vue')
+    }]
   }
 ]
 

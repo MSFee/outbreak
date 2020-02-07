@@ -54,7 +54,6 @@ export default class chinaMap extends Vue {
       const mapData =  this.getData();
       mapData.then(res => {
         const chinaData = res.data.data;
-        console.log(chinaData);
         this.echarts.registerMap('china',china);
         const myEchart = this.echarts.init(document.getElementById('map'));
         myEchart.setOption({
@@ -149,7 +148,7 @@ export default class chinaMap extends Vue {
          const history = data.historylist;
          this.sus_gntotal = history[0].cn_conNum - history[1].cn_conNum;
          this.sus_deathtotal = history[0].cn_deathNum - history[1].cn_deathNum;
-         this.sus_sustotal = history[0].cn_susNum - history[1].cn_susNum;
+         this.sus_sustotal = history[0].wjw_susNum;
          this.sus_curetotal = history[0].cn_cureNum - history[1].cn_cureNum;
        })
     }
